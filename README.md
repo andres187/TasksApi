@@ -9,7 +9,7 @@ contenido)
 
 
 1. Para descargar las librerias debemos digitar el comando:
-  npm install
+  <code>npm install</code>
 Y este descargará todas las librerias necesarias para el API
 
 2. Renombramos el archivo .env.example a .env
