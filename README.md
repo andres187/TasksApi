@@ -10,18 +10,22 @@ contenido)
 
 
 1. Para descargar las librerias debemos digitar el comando:
+  <br>
   <code>npm install</code>
+  <br>
 Y este descargará todas las librerias necesarias para el API
 
 2. Renombramos el archivo .env.example a .env
 
 3. Corremos nuestra API:
+<br>
   <code>npm run dev</code>
   
 4. http://localhost:3000/api/tasks/ ingresamos a esta dirección.
 
 5. Para crear una nueva tarea nos dirigimos al POSTMAN e ingresamos la dirección anterior pero de opción colocaremos POST:
     Ingresaremos lo siguiente:
+    <code>
     <p>
     {      
       </br>
@@ -31,11 +35,12 @@ Y este descargará todas las librerias necesarias para el API
        <br>
     }
   </p>
+  </code>
     
 6. Para leer una tarea en especifico nos dirigimos a http://localhost:3000/api/tasks/1 y podremos ver esa tarea.
 
 7. Para actualizar una tarea en el POSTMAN escogemos PUT http://localhost:3000/api/tasks/1 y mandamos el id a actualizar junto con su información:
-
+    <code>
     <p>
     {      
       </br>      
@@ -45,5 +50,5 @@ Y este descargará todas las librerias necesarias para el API
     <br>
     }
   </p>
-    
+    </code>
 8. Y para eliminar una tarea en el POSTMAN escogemos DELETE http://localhost:3000/api/tasks/1 y mandamos el id a eliminar.
