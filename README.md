@@ -22,18 +22,28 @@ Y este descargará todas las librerias necesarias para el API
 
 5. Para crear una nueva tarea nos dirigimos al POSTMAN e ingresamos la dirección anterior pero de opción colocaremos POST:
     Ingresaremos lo siguiente:
+    <p>
     {      
+      </br>
       "description": "Lo que queramos",
+       <br>
       "author": "Andres Bolivar"
+       <br>
     }
+  </p>
     
 6. Para leer una tarea en especifico nos dirigimos a http://localhost:3000/api/tasks/1 y podremos ver esa tarea.
 
 7. Para actualizar una tarea en el POSTMAN escogemos PUT http://localhost:3000/api/tasks/1 y mandamos el id a actualizar junto con su información:
 
+    <p>
     {      
+      </br>      
       "description": "Lo que queramos updated",
+      <br>
       "author": "Andres Bolivar updated"
+    <br>
     }
+  </p>
     
 8. Y para eliminar una tarea en el POSTMAN escogemos DELETE http://localhost:3000/api/tasks/1 y mandamos el id a eliminar.
