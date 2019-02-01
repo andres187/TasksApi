@@ -29,7 +29,7 @@ npm run dev
 ```
 But if us enviroment are production we need to run
 ```
-node index.js
+npm install
 ```
 
 ### API TASKS
