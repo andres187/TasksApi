@@ -1,8 +1,6 @@
-const { Model, references } = require('./model');
+const Model = require('./model');
 
 const { paginationParseParams } = require.main.require('./server/utils');
-
-const referencesNames = Object.getOwnPropertyNames(references);
 
 exports.id = (req, res, next, id) => {
   Model.findById(id)
@@ -29,12 +27,10 @@ exports.id = (req, res, next, id) => {
 exports.all = (req, res, next) => {
   const { query } = req;
   const { limit, skip, page } = paginationParseParams(query);
-  const populate = referencesNames.join(' ');
 
   const all = Model.find()
     .limit(limit)
-    .skip(skip)
-    .populate(populate);
+    .skip(skip);
   const count = Model.countDocuments();
 
   Promise.all([all.exec(), count.exec()])
