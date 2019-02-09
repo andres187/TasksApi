@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const addRequestId = require('express-request-id')();
+const cors = require('cors');
 
 const logger = require('./config/logger');
 const api = require('./api/v1');
@@ -10,6 +11,15 @@ const database = require('./database');
 database.connect();
 
 const app = express();
+
+// setup CORS
+app.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'PUT', 'POST', 'DELETE'],
+    allowedHeaders: ['Accept', 'Content-Type', 'Authorization'],
+  }),
+);
 
 // setup middleware
 app.use(addRequestId);
